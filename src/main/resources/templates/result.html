@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Handling Form Submission</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style>
+  .main {
+  width: 600px;
+  height: 220px;
+  border: 5px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+  }
+  .result {
+    height: 100px;
+    text-align: right;
+    border: 5px solid green;
+  }
+  .student{
+  text-align: right;
+  border: 2px solid black
+  }
+  html {
+  display: table;
+  margin: auto;
+  }
+
+  body {
+  display: table-cell;
+  vertical-align: middle;
+  }
+  .tab1{
+  tab-size: 15;
+  display: inline-block;
+  margin-left: 170px;
+  }
+  table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+  </style>
+</head>
+<body style="background-color:powderblue;">
+<h1 class = "tab1">Result</h1>
+<div>
+  <table class="result">
+    <tr>
+      <th></th>
+      <th>Input</th>
+      <th>Output</th>
+    </tr>
+    <tr>
+      <th>Encryption: &nbsp;&nbsp; </th>
+      <th th:text="${greeting.content} + '&nbsp;&nbsp;'" />
+      <th th:text="${greeting.contentReply}" />
+    </tr>
+    <tr>
+      <th>Decryption: &nbsp;&nbsp;</th>
+      <th th:text="${greeting.encryptedContent} + '&nbsp;&nbsp;'" />
+      <th th:text="${greeting.encryptContentReply}"  />
+    </tr>
+  </table>
+  <br>
+  <br>
+  <a class="tab1" href="/NetworkSecurity/homepage">Submit another message</a>
+  <br>
+  <br>
+  <table class="student">
+    <tr>
+      <th>Practical Assignment 0</th>
+    </tr>
+    <tr>
+      <th>Name:</th>
+      <th>Yagya Modi</th>
+    </tr>
+    <tr>
+      <th>Roll:</th>
+      <th>18075064</th>
+    </tr>
+    <tr>
+      <th>Branch:</th>
+      <th>Computer Science and Engineering</th>
+    </tr>
+    <tr>
+      <th>Subject:</th>
+      <th>Network Security</th>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <style>
+.main {
+  width: 270px;
+  height: 270px;
+  border: 5px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+}
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+.tab1{
+        tab-size: 15;
+        display: inline-block;
+        margin-left: 50px;
+    }
+</style>
+  <title>PA 0</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body style="background-color:powderblue;">
+<h1>Practical Assignment 0</h1>
+<form class="main" action="#" th:action="@{/homepage}" th:object="${greeting}" method="post">
+  <p>Normal Message: <input type="text" th:field="*{content}" /></p>
+  <br>
+  <p>Encrypted Message: <input type="text" th:field="*{encryptedContent}" /></p>
+  <br>
+  <p class="tab1"> <input type="submit" value="Submit" /> &nbsp; &nbsp;<input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
